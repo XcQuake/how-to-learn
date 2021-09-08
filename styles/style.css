@@ -6,26 +6,292 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
+/* шапка сайта */
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
+  position: relative;
+  display: flex;
+  background-color: #f2f2f2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo {
+  z-index: 1;
+}
+
+.logo_place_header {
+  background-image: url(../images/logo_place_header.svg);
+  width: 183px;
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.header__title {
+  align-self: center;
+  width: 730px;
+  margin-left: 64px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.header__subtitle {
+  margin: 0;
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+  width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2F80ED;
+  opacity: 1;
+  transition-duration: .6s;
+}
+
+.header__link:hover {
+  opacity: .6;
+}
+
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: #2F80ED;
+  position: absolute;
+  right: 0;
+  top: 64px;
+  z-index: -1;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/* Секция, блок description */
+.description {
+  display: flex;
+  margin-top: 100px;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2F80ED;
+  margin: 0;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.two-columns__paragraph:nth-child(n+2) {
+  margin-top: 30px;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+/* Секция, блок digits */
+.digits {
+  margin: 100px auto;
+  text-align: center;
+}
+
+.section-title {
+  display: inline-block;
+  width: 60%;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.section-title_theme_dark {
+  color: #fff;
+}
+
+.section-subtitle {
+  display: inline-block;
+  width: 60%;
+  margin: 20px 0 0;
+  line-height: 34px;
+  font-size: 24px;
+}
+
+.section-subtitle_theme_dark {
+  color: #fff;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.table__cell {
+  margin: 60px 0 0;
+  width: 250px;
+  text-align: start;
+  list-style-type: none;
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
+}
+
+/* Элементы table__heading и table__text в блоке kaufman имеют те же стили, что и в блоке digits, кроме цвета текста. */
+/* Но белый цвет текста задаётся в модификаторе родительского элемента - table__cell. */
+/* Поэтому непонятно, зачем нужны модификаторы theme_dark для этих элементов, если они не задают уникальные стили */
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+/*
+.table__heading_theme_dark {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+*/
+.table__text {
+  margin: 20px 0 0;
+  line-height: 1.2;
+  font-size: 18px;
+}
+/*
+.table__text_theme_dark {
+  line-height: 1.2;
+  font-size: 18px;
+  color: #fff;
+}
+*/
+
+/* Секция, блок feynman */
+.feynman {
+  margin: 100px auto 0;
+  text-align: center;
+  position: relative;
+  min-height: 890px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 867px 637px;
+
+}
+
+.feynman__title {
+  display: inline-block;
+  margin: 0;
+  width: 648px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+}
+
+.feynman__subtitle {
+  margin: 70px 0 0;
+  line-height: 51px;
+  font-size: 36px;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  text-decoration: none;
+  color: #2F80ED;
+  opacity: 1;
+  transition-duration: .6s;
+}
+
+.feynman__link:hover {
+  opacity: .6;
+}
+
+/* Секция, блок kaufman */
+.kaufman {
+  margin: auto;
+  background-color: #1F1F1F;
+  text-align: center;
+  padding: 90px 0;
+  position: relative;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  width: 877px;
+  height: 877px;
+}
+
+/* Подвал */
+.footer {
+  background-color: #1F1F1F;
+  padding: 60px 0 40px;
+  min-height: 350px;
+}
+
+.footer_columns {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_column {
+  background-color: aquamarine;
+
+}
+
+.footer_column_content_copyright {
+}
+
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg);
+  width: 183px;
+  height: 35px;
 }
