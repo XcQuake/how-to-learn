@@ -17,6 +17,7 @@
   position: relative;
   display: flex;
   background-color: #f2f2f2;
+  z-index: -1;
 }
 
 .logo {
@@ -108,6 +109,8 @@
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
+  list-style-type: none;
+  margin: 0;
 }
 
 .two-columns__paragraph {
@@ -179,8 +182,8 @@
   z-index: 1;
 }
 
-/* Элементы table__heading и table__text в блоке kaufman имеют те же стили, что и в блоке digits, кроме цвета текста. */
-/* Но белый цвет текста задаётся в модификаторе родительского элемента - table__cell. */
+/* Элементы table__heading и table__text в блоке kaufman имеют те же стили, что и в блоке digits, кроме цвета текста */
+/* Но белый цвет текста задаётся в модификаторе родительского элемента - table__cell_theme_dark */
 /* Поэтому непонятно, зачем нужны модификаторы theme_dark для этих элементов, если они не задают уникальные стили */
 .table__heading {
   line-height: 1.15;
@@ -275,23 +278,62 @@
   background-color: #1F1F1F;
   padding: 60px 0 40px;
   min-height: 350px;
+  box-sizing: border-box;
+
 }
 
-.footer_columns {
+.footer__columns {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
 }
 
-.footer_column {
-  background-color: aquamarine;
-
+.footer__column {
+  min-height: 250px;
 }
 
-.footer_column_content_copyright {
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
   width: 183px;
   height: 35px;
+}
+
+.footer__author {
+  color: #fff;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.footer__column_heading {
+  color: #fff;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer__column_links {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 16px;
+}
+
+.footer__column_link {
+  text-decoration: none;
+  color: #fff;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
 }
