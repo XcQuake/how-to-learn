@@ -190,30 +190,26 @@
   z-index: 1;
 }
 
-/* Элементы table__heading и table__text в блоке kaufman имеют те же стили, что и в блоке digits, кроме цвета текста */
-/* Но белый цвет текста задаётся в модификаторе родительского элемента - table__cell_theme_dark */
-/* Поэтому непонятно, зачем нужны модификаторы theme_dark для этих элементов, если они не задают уникальные стили */
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
-/*
+
 .table__heading_theme_dark {
   color: #fff;
 }
-*/
+
 .table__text {
   margin: 20px 0 0;
   line-height: 1.2;
   font-size: 18px;
 }
-/*
+
 .table__text_theme_dark {
   color: #fff;
 }
-*/
 
 /* Секция, блок feynman */
 .feynman {
