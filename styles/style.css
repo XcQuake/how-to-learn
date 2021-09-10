@@ -148,6 +148,8 @@
 
 .section-title_theme_dark {
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .section-subtitle {
@@ -160,6 +162,8 @@
 
 .section-subtitle_theme_dark {
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .table {
@@ -271,11 +275,11 @@
 .kaufman__triangle {
   width: 877px;
   height: 877px;
-  background-image: url(../images/kaufman-triangle.svg);
-  background-size: cover;
   position: absolute;
   top: 0;
   right: -210px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
 }
 
 /* Подвал */
