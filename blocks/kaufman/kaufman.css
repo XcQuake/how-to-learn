@@ -1,0 +1,9 @@
+.kaufman {
+  margin: auto;
+  background-color: #1F1F1F;
+  text-align: center;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
